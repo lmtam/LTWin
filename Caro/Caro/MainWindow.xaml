@@ -1,0 +1,66 @@
+﻿<Window x:Class="Caro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Caro" Height="450" Width="900" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+
+            <ColumnDefinition Width="2.9*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" x:Name="gridChess">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="26*" />
+                <RowDefinition Height="26*" />
+                <RowDefinition Height="26*" />
+                <RowDefinition Height="26*" />
+                <RowDefinition Height="26*" />
+                <RowDefinition Height="26*" />
+                <RowDefinition Height="26*" />
+                <RowDefinition Height="26*" />
+                <RowDefinition Height="26*" />
+                <RowDefinition Height="26*" />
+                <RowDefinition Height="26*" />
+                <RowDefinition Height="26*" />
+            </Grid.RowDefinitions>
+        </Grid>
+        <Grid Margin="10,0" Grid.Column="1">
+
+            <TextBox x:Name="name" Text="Guest" Height="23" HorizontalAlignment="Left" Margin="100,69,0,0"  VerticalAlignment="Top" Width="253" />
+            <Label Content="Your name:" Height="28" HorizontalAlignment="Left" Margin="20,69,0,0" Name="label1" VerticalAlignment="Top" />
+
+            <TextBox x:Name="chatbox" Height="150" HorizontalAlignment="Left" Margin="20,132,0,0"  VerticalAlignment="Top" Width="376" IsReadOnly="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" />
+            <Button  x:Name="change" Content="Change" HorizontalAlignment="Left" Margin="358,72,0,0" VerticalAlignment="Top" Width="66" Click="_change_Click"/>
+            <TextBox Background="Azure" HorizontalAlignment="Left" Height="23" Margin="20,104,0,0" TextWrapping="Wrap" Text="Chat/History"  VerticalAlignment="Top" Width="376" RenderTransformOrigin="0.514,0.761"/>
+            <StackPanel Background="Bisque" HorizontalAlignment="Left" Height="76" Margin="100,312,0,0" VerticalAlignment="Top" Width="296"/>
+            <TextBox x:Name="message" HorizontalAlignment="Left" Height="33" Margin="116,337,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="127" VerticalScrollBarVisibility="Visible"/>
+            <Button x:Name="send" Content="Send" HorizontalAlignment="Left" Margin="248,337,0,0" VerticalAlignment="Top" Width="62" Height="33" RenderTransformOrigin="0.27,0.546" Click="_send_Click"/>
+            <Button x:Name="exit" Content="Exit" HorizontalAlignment="Left" Margin="315,337,0,0" VerticalAlignment="Top" Width="62" Height="33" Click="_exit_Click" RenderTransformOrigin="0.196,0.684"/>
+            <GroupBox Header="Chế độ chơi" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="420" Height="64">
+                <StackPanel Orientation="Horizontal" Margin="2,0,-2,-12" >
+
+
+                    <Button x:Name ="choi2nguoi" Content="Chơi offline" Margin="0,2,0,10" Width="94" Click="choi2nguoi_Click" />
+                    <Button x:Name="Choivoimay" Content="Chơi với máy" Margin="5,2,0,10" Width="100" Click="Choivoimay_Click" RenderTransformOrigin="0.51,0.52"/>
+                    <Button x:Name ="Nguoichoionline" Content="Nguoichơi online" Margin="5,2,0,10" Width="94" Click="Nguoichoionline_Click" />
+                    <Button x:Name ="Mayonline" Content="Máy chơi online" Margin="5,2,0,10" Width="94" Click="Maychoionline_Click" />
+                </StackPanel>
+            </GroupBox>
+
+        </Grid>
+    </Grid>
+</Window>
